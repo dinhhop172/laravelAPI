@@ -33,6 +33,11 @@
             <li class="nav-item pd-lr">
                 <a class="nav-link" href="{{ route('contact') }}">Contact</a>
             </li>
+
+            <li class="nav-item pd-lr">
+                <a class="nav-link" href="{{ route('apiBrand') }}">TestAPI</a>
+            </li>
+
             @if (!empty(session()->get('carts')))
                 <li class="nav-item pd-lr">
                     <a class="nav-link count" href="{{ route('viewCart') }}">Cart <i class="fas fa-cart-plus"></i><span> {{ count_item_in_cart() }}</span></a>

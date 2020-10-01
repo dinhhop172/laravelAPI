@@ -27,4 +27,12 @@ class ProductController extends Controller
             array('data' => $product)
         );
     }
+
+    public function search(Request $request){
+        $key_word = $request->input('q');
+        $products = Product::where('name', 'like', '%'.$key_word.'%')->get();
+        return api_success(
+            array('data' => $products)
+        );
+    }
 }

@@ -56,7 +56,7 @@ Route::get('fetch-all-data', function () {
 });
 
 Route::get('/', function () {
-    return view('front.content');
+    return view('front.welcome');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
